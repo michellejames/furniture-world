@@ -1,9 +1,17 @@
 /*!
+<<<<<<< HEAD
  * VERSION: 0.2.2
  * DATE: 2018-02-15
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2018, GreenSock. All rights reserved.
+=======
+ * VERSION: 0.1.6
+ * DATE: 2014-07-17
+ * UPDATES AND DOCS AT: http://www.greensock.com
+ *
+ * @license Copyright (c) 2008-2015, GreenSock. All rights reserved.
+>>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
  * This work is subject to the terms at http://greensock.com/standard-license or for
  * Club GreenSock members, the software agreement that was issued with your membership.
  * 
@@ -229,6 +237,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 	_gsScope._gsDefine.plugin({
 		propName: "easel",
 		priority: -1,
+<<<<<<< HEAD
 		version: "0.2.2",
 		API: 2,
 
@@ -242,6 +251,17 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 				if (typeof(end) === "function") {
 					end = end(index, target);
 				}
+=======
+		version: "0.1.6",
+		API: 2,
+
+		//called when the tween renders for the first time. This is where initial values should be recorded and any setup routines should run.
+		init: function(target, value, tween) {
+			this._target = target;
+			var p, pt, tint, colorMatrix;
+			for (p in value) {
+
+>>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 				if (p === "colorFilter" || p === "tint" || p === "tintAmount" || p === "exposure" || p === "brightness") {
 					if (!tint) {
 						_parseColorFilter(target, value.colorFilter || value, this);
@@ -255,6 +275,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 					}
 
 				} else if (p === "frame") {
+<<<<<<< HEAD
 					this._firstPT = pt = {_next:this._firstPT, t:target, p:"gotoAndStop", s:target.currentFrame, f:true, n:"frame", pr:0, type:0, m:Math.round};
 					if (typeof(end) === "string" && end.charAt(1) !== "=" && (labels = target.labels)) {
 						for (i = 0; i < labels.length; i++) {
@@ -264,6 +285,10 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 						}
 					}
 					pt.c = (typeof(end) === "number") ? end - pt.s : parseFloat((end+"").split("=").join(""));
+=======
+					this._firstPT = pt = {_next:this._firstPT, t:target, p:"gotoAndStop", s:target.currentFrame, f:true, n:"frame", pr:0, type:0, r:true};
+					pt.c = (typeof(value[p]) === "number") ? value[p] - pt.s : (typeof(value[p]) === "string") ? parseFloat(value[p].split("=").join("")) : 0;
+>>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 					if (pt._next) {
 						pt._next._prev = pt;
 					}
@@ -271,7 +296,11 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 				} else if (target[p] != null) {
 					this._firstPT = pt = {_next:this._firstPT, t:target, p:p, f:(typeof(target[p]) === "function"), n:p, pr:0, type:0};
 					pt.s = (!pt.f) ? parseFloat(target[p]) : target[ ((p.indexOf("set") || typeof(target["get" + p.substr(3)]) !== "function") ? p : "get" + p.substr(3)) ]();
+<<<<<<< HEAD
 					pt.c = (typeof(end) === "number") ? end - pt.s : (typeof(end) === "string") ? parseFloat(end.split("=").join("")) : 0;
+=======
+					pt.c = (typeof(value[p]) === "number") ? value[p] - pt.s : (typeof(value[p]) === "string") ? parseFloat(value[p].split("=").join("")) : 0;
+>>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 
 					if (pt._next) {
 						pt._next._prev = pt;
@@ -289,8 +318,13 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 				val;
 			while (pt) {
 				val = pt.c * v + pt.s;
+<<<<<<< HEAD
 				if (pt.m) {
 					val = pt.m(val, pt.t);
+=======
+				if (pt.r) {
+					val = Math.round(val);
+>>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 				} else if (val < min && val > -min) {
 					val = 0;
 				}
@@ -308,6 +342,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 
 	});
 
+<<<<<<< HEAD
 }); if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); }
 //export to AMD/RequireJS and CommonJS/Node (precursor to full modular build system coming at a later date)
 (function(name) {
@@ -322,3 +357,6 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		define(["TweenLite"], getGlobal);
 	}
 }("EaselPlugin"));
+=======
+}); if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); }
+>>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b

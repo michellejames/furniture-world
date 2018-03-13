@@ -1,9 +1,17 @@
 /*!
+<<<<<<< HEAD
  * VERSION: 1.16.0
  * DATE: 2018-02-15
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2018, GreenSock. All rights reserved.
+=======
+ * VERSION: beta 1.15.2
+ * DATE: 2015-01-27
+ * UPDATES AND DOCS AT: http://greensock.com
+ *
+ * @license Copyright (c) 2008-2015, GreenSock. All rights reserved.
+>>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
  * This work is subject to the terms at http://greensock.com/standard-license or for
  * Club GreenSock members, the software agreement that was issued with your membership.
  * 
@@ -92,7 +100,11 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 				this._calcEnd = (yoyoMode === true);
 			}, true),
 			p = SlowMo.prototype = new Ease(),
+<<<<<<< HEAD
 			SteppedEase, ExpoScaleEase, RoughEase, _createElastic;
+=======
+			SteppedEase, RoughEase, _createElastic;
+>>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 			
 		p.constructor = SlowMo;
 		p.getRatio = function(p) {
@@ -100,7 +112,11 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			if (p < this._p1) {
 				return this._calcEnd ? 1 - ((p = 1 - (p / this._p1)) * p) : r - ((p = 1 - (p / this._p1)) * p * p * p * r);
 			} else if (p > this._p3) {
+<<<<<<< HEAD
 				return this._calcEnd ? (p === 1 ? 0 : 1 - (p = (p - this._p3) / this._p1) * p) : r + ((p - r) * (p = (p - this._p3) / this._p1) * p * p * p); //added p === 1 ? 0 to avoid floating point rounding errors from affecting the final value, like 1 - 0.7 = 0.30000000000000004 instead of 0.3
+=======
+				return this._calcEnd ? 1 - (p = (p - this._p3) / this._p1) * p : r + ((p - r) * (p = (p - this._p3) / this._p1) * p * p * p);
+>>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 			}
 			return this._calcEnd ? 1 : r;
 		};
@@ -112,11 +128,18 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 
 
 		//SteppedEase
+<<<<<<< HEAD
 		SteppedEase = _class("easing.SteppedEase", function(steps, immediateStart) {
 				steps = steps || 1;
 				this._p1 = 1 / steps;
 				this._p2 = steps + (immediateStart ? 0 : 1);
 				this._p3 = immediateStart ? 1 : 0;
+=======
+		SteppedEase = _class("easing.SteppedEase", function(steps) {
+				steps = steps || 1;
+				this._p1 = 1 / steps;
+				this._p2 = steps + 1;
+>>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 			}, true);
 		p = SteppedEase.prototype = new Ease();	
 		p.constructor = SteppedEase;
@@ -126,6 +149,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			} else if (p >= 1) {
 				p = 0.999999999;
 			}
+<<<<<<< HEAD
 			return (((this._p2 * p) | 0) + this._p3) * this._p1;
 		};
 		p.config = SteppedEase.config = function(steps, immediateStart) {
@@ -150,6 +174,12 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		};
 		p.config = ExpoScaleEase.config = function(start, end, ease) {
 			return new ExpoScaleEase(start, end, ease);
+=======
+			return ((this._p2 * p) >> 0) * this._p1;
+		};
+		p.config = SteppedEase.config = function(steps) {
+			return new SteppedEase(steps);
+>>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 		};
 
 
@@ -363,6 +393,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		
 	}, true);
 
+<<<<<<< HEAD
 }); if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); }
 
 //export to AMD/RequireJS and CommonJS/Node (precursor to full modular build system coming at a later date)
@@ -378,3 +409,6 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		define(["TweenLite"], getGlobal);
 	}
 }());
+=======
+}); if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); }
+>>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
