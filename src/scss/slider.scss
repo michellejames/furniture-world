@@ -1,0 +1,643 @@
+.carousel-container-background {
+  margin: 0 auto;
+  position: relative;
+  perspective: 100vw;
+
+  .background {
+    display: block;
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .background-a {
+    transform-origin: center center;
+    transform: rotateY(0deg) translateZ(-90vw) scale(1.65) translateY(11vw)  ;
+
+    .background-a-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-position: center center;
+      background-image: url(../img/bgs/RoomBG-updated.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .background-b {
+    transform-origin: center center;
+    transform: rotateY(36deg) translateZ(-90vw) scale(1.65) translateY(11vw)  ;
+
+    .background-b-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-position: center center;
+      background-image: url(../img/bgs/RoomBG-updated.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .background-c {
+    transform-origin: center center;
+    transform: rotateY(72deg) translateZ(-90vw) scale(1.65) translateY(11vw)  ;
+
+    .background-c-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-position: center center;
+      background-image: url(../img/bgs/RoomBG-updated.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .background-d {
+    transform-origin: center center;
+    transform: rotateY(108deg) translateZ(-90vw) scale(1.65) translateY(11vw)  ;
+
+    .background-d-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-position: center center;
+      background-image: url(../img/bgs/RoomBG-updated.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .background-e {
+    transform-origin: center center;
+    transform: rotateY(144deg) translateZ(-90vw) scale(1.65) translateY(11vw)  ;
+
+    .background-e-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-position: center center;
+      background-image: url(../img/bgs/RoomBG-updated.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .background-f {
+    transform-origin: center center;
+    transform: rotateY(180deg) translateZ(-90vw) scale(1.65) translateY(11vw)  ;
+    // transform: rotateY(180deg) translateZ(0) translateX(680px) translateY(-320px) ;
+    // transform: rotateY(180deg) translateZ(450px);
+
+    .background-f-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-position: center center;
+      background-image: url(../img/bgs/RoomBG-updated.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .background-g {
+    transform-origin: center center;
+    transform: rotateY(216deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .background-g-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-position: center center;
+      background-image: url(../img/bgs/RoomBG-updated.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .background-h {
+   transform-origin: center center;
+   transform: rotateY(252deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+   .background-h-image {
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     background-size: contain;
+     background-position: center center;
+     background-image: url(../img/bgs/RoomBG-updated.png);
+     width: 36vw;
+     height: 65vw;
+   }
+  }
+
+  .background-i {
+    transform-origin: center center;
+    transform: rotateY(288deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .background-i-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-position: center center;
+      background-image: url(../img/bgs/RoomBG-updated.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .background-j {
+    transform-origin: center center;
+    transform: rotateY(324deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .background-j-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-position: center center;
+      background-image: url(../img/bgs/RoomBG-updated.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+}
+
+.carousel-container-MG {
+  margin: 0 auto;
+  position: relative;
+  perspective: 100vw;
+
+  .flower {
+    display: block;
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .flower-a {
+    transform-origin: center center;
+    transform: rotateY(0deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .flower-a-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/snake/MG.png);
+      width: 36vw;
+      height: 65vw;
+      top: 5%;
+    }
+  }
+
+  .flower-b {
+    transform-origin: center center;
+    transform: rotateY(36deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .flower-b-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/spider/MiddleGround.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .flower-c {
+    transform-origin: center center;
+    transform: rotateY(72deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .flower-c-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/fungus/MG.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .flower-d {
+    transform-origin: center center;
+    transform: rotateY(108deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .flower-d-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/wildthing/MG.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .flower-e {
+    transform-origin: center center;
+    transform: rotateY(144deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .flower-e-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/LightningBug/MG.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .flower-f {
+    transform-origin: center center;
+    transform: rotateY(180deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .flower-f-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/bat/MG.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .flower-g {
+    transform-origin: center center;
+    transform: rotateY(216deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .flower-g-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/bird/MG.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .flower-h {
+    transform-origin: center center;
+    transform: rotateY(252deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .flower-h-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/deer/MG.png);
+      width: 10vw;
+      height: 10vw;
+      top: 80vh;
+      left: 40%;
+      opacity: .7;
+    }
+  }
+
+  .flower-i {
+    transform-origin: center center;
+    transform: rotateY(288deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .flower-i-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/gorilla/MG.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .flower-j {
+    transform-origin: center center;
+    transform: rotateY(324deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .flower-j-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/mouse/MG.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+}
+
+.carousel-container-FG {
+  margin: 0 auto;
+  position: relative;
+  perspective: 100vw;
+
+  .flower {
+    display: block;
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .flower-a {
+    transform-origin: center center;
+    transform: rotateY(0deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+  }
+
+  .flower-b {
+    transform-origin: center center;
+    transform: rotateY(36deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+  }
+
+  .flower-d {
+    transform-origin: center center;
+    transform: rotateY(108deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+  }
+
+  .flower-e {
+    transform-origin: center center;
+    transform: rotateY(144deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .flower-e-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/LightningBug/FG.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .flower-f {
+    transform-origin: center center;
+    transform: rotateY(180deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .flower-f-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/bat/FG.png);
+      width: 36vw;
+      height: 65vw;
+    }
+  }
+
+  .flower-h {
+    transform-origin: center center;
+    transform: rotateY(252deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+
+    .flower-h-image {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url(../img/deer/FG.png);
+      width: 20vw;
+      height: 20vw;
+    }
+  }
+
+  .flower-i {
+    transform-origin: center center;
+    transform: rotateY(288deg) translateZ(-90vw) scale(1.65) translateY(11vw);
+  }
+}
+
+
+.carousel-container {
+  margin: 0 auto;
+  width: 250px;
+  height: 200px;
+  position: relative;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  perspective: 400px;
+  transform: scale(3);
+  // transform: rotateX(50deg) translateY(89%) translateY(-21%);
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  // transform: rotateX(50deg) translateY(89%) translateY(-21%);
+  // transition: transform 1s;
+  //transform-origin: center center;
+}
+
+.item {
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background: transparent;
+  width: 20vw;
+  height: 20vh;
+  opacity: 0.95;
+
+
+  // &:hover {
+  //   transform: scale(.6);
+  // }
+}
+
+.a {
+  transform: rotateY(0deg) translateZ(450px);
+
+  .item-a-image {
+    position: absolute;
+    background-image: url(../img/bat.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+.b {
+  transform: rotateY(36deg) translateZ(450px);
+
+  .item-b-image {
+    position: absolute;
+    background-image: url(../img/bird.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+.c {
+  transform: rotateY(72deg) translateZ(450px);
+
+  .item-c-image {
+    position: absolute;
+    background-image: url(../img/deer.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+.d {
+  transform: rotateY(108deg) translateZ(450px);
+
+  .item-d-image {
+    position: absolute;
+    background-image: url(../img/porcupine.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+.e {
+  transform: rotateY(144deg) translateZ(450px);
+
+  .item-e-image {
+    position: absolute;
+    background-image: url(../img/mouse.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+} 
+.f {
+  transform: rotateY(180deg)  translateZ(450px);
+
+  .item-f-image {
+    position: absolute;
+    background-image: url(../img/snake.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.g {
+  transform: rotateY(216deg) translateZ(450px);
+
+  .item-g-image {
+    position: absolute;
+    background-image: url(../img/spider.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.h {
+  transform: rotateY(252deg) translateZ(450px);
+
+  .item-h-image {
+    position: absolute;
+    background-image: url(../img/weird_thing.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.i {
+  transform: rotateY(288deg) translateZ(450px);
+
+  .item-i-image {
+    position: absolute;
+    background-image: url(../img/wild_thing.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.j {
+  transform: rotateY(324deg) translateZ(450px);
+
+  .item-j-image {
+    position: absolute;
+    background-image: url(../img/lightning_bug.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.next, .prev {
+  color: #444;
+  position: absolute;
+  z-index: 20;
+  top: 40%;
+  padding: 1em 2em;
+  cursor: pointer;
+  background: #CCC;
+  border-radius: 5px;
+  border-top: 1px solid #FFF;
+  box-shadow: 0 5px 0 #999;
+  transition: box-shadow 0.1s, top 0.1s;
+}
+
+.next { right: 5em; }
+.prev { left: 5em; }
