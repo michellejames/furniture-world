@@ -1,17 +1,9 @@
 /*!
-<<<<<<< HEAD
  * VERSION: 0.3.1
  * DATE: 2018-02-15
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2018, GreenSock. All rights reserved.
-=======
- * VERSION: beta 0.2.1
- * DATE: 2014-07-17
- * UPDATES AND DOCS AT: http://www.greensock.com
- *
- * @license Copyright (c) 2008-2015, GreenSock. All rights reserved.
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
  * This work is subject to the terms at http://greensock.com/standard-license or for
  * Club GreenSock members, the software agreement that was issued with your membership.
  * 
@@ -24,19 +16,11 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 
 	_gsScope._gsDefine.plugin({
 		propName: "directionalRotation",
-<<<<<<< HEAD
 		version: "0.3.1",
 		API: 2,
 
 		//called when the tween renders for the first time. This is where initial values should be recorded and any setup routines should run.
 		init: function(target, value, tween, index) {
-=======
-		version: "0.2.1",
-		API: 2,
-
-		//called when the tween renders for the first time. This is where initial values should be recorded and any setup routines should run.
-		init: function(target, value, tween) {
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 			if (typeof(value) !== "object") {
 				value = {rotation:value};
 			}
@@ -46,15 +30,11 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 				p, v, start, end, dif, split;
 			for (p in value) {
 				if (p !== "useRadians") {
-<<<<<<< HEAD
 					end = value[p];
 					if (typeof(end) === "function") {
 						end = end(index, target);
 					}
 					split = (end + "").split("_");
-=======
-					split = (value[p] + "").split("_");
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 					v = split[0];
 					start = parseFloat( (typeof(target[p]) !== "function") ? target[p] : target[ ((p.indexOf("set") || typeof(target["get" + p.substr(3)]) !== "function") ? p : "get" + p.substr(3)) ]() );
 					end = this.finals[p] = (typeof(v) === "string" && v.charAt(1) === "=") ? start + parseInt(v.charAt(0) + "1", 10) * Number(v.substr(2)) : Number(v) || 0;
@@ -102,7 +82,6 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 
 	})._autoCSS = true;
 
-<<<<<<< HEAD
 }); if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); }
 
 //export to AMD/RequireJS and CommonJS/Node (precursor to full modular build system coming at a later date)
@@ -118,6 +97,3 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		define(["TweenLite"], getGlobal);
 	}
 }("DirectionalRotationPlugin"));
-=======
-}); if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); }
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b

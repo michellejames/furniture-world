@@ -1,17 +1,9 @@
 /*!
-<<<<<<< HEAD
  * VERSION: 0.6.6
  * DATE: 2018-02-15
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2018, GreenSock. All rights reserved.
-=======
- * VERSION: beta 0.6.3
- * DATE: 2014-12-31
- * UPDATES AND DOCS AT: http://www.greensock.com
- *
- * @license Copyright (c) 2008-2015, GreenSock. All rights reserved.
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
  * This work is subject to the terms at http://greensock.com/standard-license or for
  * Club GreenSock members, the software agreement that was issued with your membership.
  * 
@@ -29,21 +21,13 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 				TweenPlugin.call(this, "cssRule");
 				this._overwriteProps.length = 0;
 			},
-<<<<<<< HEAD
 			_doc = _gsScope.document,
-=======
-			_doc = window.document,
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 			_superSetRatio = CSSPlugin.prototype.setRatio,
 			p = CSSRulePlugin.prototype = new CSSPlugin();
 
 		p._propName = "cssRule";
 		p.constructor = CSSRulePlugin;
-<<<<<<< HEAD
 		CSSRulePlugin.version = "0.6.6";
-=======
-		CSSRulePlugin.version = "0.6.3";
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 		CSSRulePlugin.API = 2;
 
 		/**
@@ -55,20 +39,12 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		 * @return a reference to the style sheet (or an array of them in the case of a pseudo selector). If none was found, null is returned (or an empty array for a pseudo selector)
 		 */
 		CSSRulePlugin.getRule = function(selector) {
-<<<<<<< HEAD
 			var ruleProp = _doc.all ? "rules" : "cssRules",
-=======
-			var ruleProp = _doc.all ? 'rules' : 'cssRules',
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 				ss = _doc.styleSheets,
 				i = ss.length,
 				pseudo = (selector.charAt(0) === ":"),
 				j, curSS, cs, a;
-<<<<<<< HEAD
 			selector = (pseudo ? "" : ",") + selector.split("::").join(":").toLowerCase() + ","; //note: old versions of IE report tag name selectors as upper case, so we just change everything to lowercase.
-=======
-			selector = (pseudo ? "" : ",") + selector.toLowerCase() + ","; //note: old versions of IE report tag name selectors as upper case, so we just change everything to lowercase.
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 			if (pseudo) {
 				a = [];
 			}
@@ -126,7 +102,6 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		
 	}, true);
 	
-<<<<<<< HEAD
 }); if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); }
 
 //export to AMD/RequireJS and CommonJS/Node (precursor to full modular build system coming at a later date)
@@ -142,6 +117,3 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		define(["TweenLite"], getGlobal);
 	}
 }("CSSRulePlugin"));
-=======
-}); if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); }
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b

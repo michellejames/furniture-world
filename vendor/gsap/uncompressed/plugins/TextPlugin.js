@@ -1,5 +1,4 @@
 /*!
-<<<<<<< HEAD
  * VERSION: 0.6.2
  * DATE: 2018-02-15
  * UPDATES AND DOCS AT: http://greensock.com
@@ -8,25 +7,11 @@
  * This work is subject to the terms at http://greensock.com/standard-license or for
  * Club GreenSock members, the software agreement that was issued with your membership.
  *
-=======
- * VERSION: 0.5.1
- * DATE: 2014-07-17
- * UPDATES AND DOCS AT: http://www.greensock.com
- *
- * @license Copyright (c) 2008-2015, GreenSock. All rights reserved.
- * This work is subject to the terms at http://greensock.com/standard-license or for
- * Club GreenSock members, the software agreement that was issued with your membership.
- * 
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
  * @author: Jack Doyle, jack@greensock.com
  */
 var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(global) !== "undefined") ? global : this || window; //helps ensure compatibility with AMD/RequireJS and CommonJS/Node
 (_gsScope._gsQueue || (_gsScope._gsQueue = [])).push( function() {
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 	"use strict";
 
 		var _getText = function(e) {
@@ -45,7 +30,6 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 				}
 				return result;
 			},
-<<<<<<< HEAD
 			_emoji = "[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2694-\u2697]|\uD83E[\uDD10-\uDD5D]|[\uD800-\uDBFF][\uDC00-\uDFFF]",
 			_emojiExp = new RegExp(_emoji),
 			_emojiAndCharsExp = new RegExp(_emoji + "|.", "g"),
@@ -99,17 +83,6 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 					}
 					this._svg = (target.getBBox && (i === "TEXT" || i === "TSPAN"));
 					if (!("innerHTML" in target) && !this._svg) {
-=======
-			TextPlugin = _gsScope._gsDefine.plugin({
-				propName: "text",
-				API: 2,
-				version:"0.5.1",
-
-				//called when the tween renders for the first time. This is where initial values should be recorded and any setup routines should run.
-				init: function(target, value, tween) {
-					var i, shrt;
-					if (!("innerHTML" in target)) {
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 						return false;
 					}
 					this._target = target;
@@ -121,13 +94,8 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 						return true;
 					}
 					this._delimiter = value.delimiter || "";
-<<<<<<< HEAD
 					this._original = _emojiSafeSplit(_getText(target).replace(/\s+/g, " "), this._delimiter);
 					this._text = _emojiSafeSplit(value.value.replace(/\s+/g, " "), this._delimiter);
-=======
-					this._original = _getText(target).replace(/\s+/g, " ").split(this._delimiter);
-					this._text = value.value.replace(/\s+/g, " ").split(this._delimiter);
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 					this._runBackwards = (tween.vars.runBackwards === true);
 					if (this._runBackwards) {
 						i = this._original;
@@ -142,11 +110,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 						this._oldClass = value.oldClass;
 						this._hasClass = true;
 					}
-<<<<<<< HEAD
 					i = this._original.length - this._text.length;
-=======
-					i = this._original.length - this._text.length,
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 					shrt = (i < 0) ? this._original : this._text;
 					this._fillChar = value.fillChar || (value.padSpace ? "&nbsp;" : "");
 					if (i < 0) {
@@ -178,20 +142,15 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 					} else {
 						str = this._text.slice(0, i).join(this._delimiter) + this._delimiter + this._original.slice(i).join(this._delimiter);
 					}
-<<<<<<< HEAD
 					if (this._svg) { //SVG text elements don't have an "innerHTML" in Microsoft browsers.
 						this._target.textContent = str;
 					} else {
 						this._target.innerHTML = (this._fillChar === "&nbsp;" && str.indexOf("  ") !== -1) ? str.split("  ").join("&nbsp;&nbsp;") : str;
 					}
-=======
-					this._target.innerHTML = (this._fillChar === "&nbsp;" && str.indexOf("  ") !== -1) ? str.split("  ").join("&nbsp;&nbsp;") : str;
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 				}
 
 			}),
 			p = TextPlugin.prototype;
-<<<<<<< HEAD
 
 		p._newClass = p._oldClass = p._delimiter = "";
 
@@ -210,9 +169,3 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		define(["TweenLite"], getGlobal);
 	}
 }("TextPlugin"));
-=======
-		
-		p._newClass = p._oldClass = p._delimiter = "";
-
-}); if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); }
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b

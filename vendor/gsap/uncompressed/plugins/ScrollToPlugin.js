@@ -1,17 +1,9 @@
 /*!
-<<<<<<< HEAD
  * VERSION: 1.9.0
  * DATE: 2018-02-15
  * UPDATES AND DOCS AT: http://greensock.com
  *
  * @license Copyright (c) 2008-2018, GreenSock. All rights reserved.
-=======
- * VERSION: 1.7.5
- * DATE: 2015-02-26
- * UPDATES AND DOCS AT: http://greensock.com
- *
- * @license Copyright (c) 2008-2015, GreenSock. All rights reserved.
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
  * This work is subject to the terms at http://greensock.com/standard-license or for
  * Club GreenSock members, the software agreement that was issued with your membership.
  * 
@@ -22,13 +14,8 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 
 	"use strict";
 
-<<<<<<< HEAD
 	var _doc = (_gsScope.document || {}).documentElement,
 		_window = _gsScope,
-=======
-	var _doc = document.documentElement,
-		_window = window,
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 		_max = function(element, axis) {
 			var dim = (axis === "x") ? "Width" : "Height",
 				scroll = "scroll" + dim,
@@ -36,7 +23,6 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 				body = document.body;
 			return (element === _window || element === _doc || element === body) ? Math.max(_doc[scroll], body[scroll]) - (_window["inner" + dim] || _doc[client] || body[client]) : element[scroll] - element["offset" + dim];
 		},
-<<<<<<< HEAD
 		_unwrapElement = function(value) {
 			if (typeof(value) === "string") {
 				value = TweenLite.selector(value);
@@ -76,18 +62,12 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 			var type = typeof(value);
 			return !isNaN(value) ? parseFloat(value) : (type === "number" || (type === "string" && value.charAt(1) === "=")) ? value : (value === "max") ? _max(target, axis) : Math.min(_max(target, axis), _getOffset(value, target)[axis]);
 		},
-=======
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 
 		ScrollToPlugin = _gsScope._gsDefine.plugin({
 			propName: "scrollTo",
 			API: 2,
-<<<<<<< HEAD
 			global: true,
 			version:"1.9.0",
-=======
-			version:"1.7.5",
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 
 			//called when the tween renders for the first time. This is where initial values should be recorded and any setup routines should run.
 			init: function(target, value, tween) {
@@ -96,7 +76,6 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 				this._tween = tween;
 				if (typeof(value) !== "object") {
 					value = {y:value}; //if we don't receive an object as the parameter, assume the user intends "y".
-<<<<<<< HEAD
 					if (typeof(value.y) === "string" && value.y !== "max" && value.y.charAt(1) !== "=") {
 						value.x = value.y;
 					}
@@ -111,25 +90,12 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 				this.y = this.yPrev = this.getY();
 				if (value.x != null) {
 					this._addTween(this, "x", this.x, _parseVal(value.x, target, "x") - (value.offsetX || 0), "scrollTo_x", true);
-=======
-				}
-				this.vars = value;
-				this._autoKill = (value.autoKill !== false);
-				this.x = this.xPrev = this.getX();
-				this.y = this.yPrev = this.getY();
-				if (value.x != null) {
-					this._addTween(this, "x", this.x, (value.x === "max") ? _max(target, "x") : value.x, "scrollTo_x", true);
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 					this._overwriteProps.push("scrollTo_x");
 				} else {
 					this.skipX = true;
 				}
 				if (value.y != null) {
-<<<<<<< HEAD
 					this._addTween(this, "y", this.y, _parseVal(value.y, target, "y") - (value.offsetY || 0), "scrollTo_y", true);
-=======
-					this._addTween(this, "y", this.y, (value.y === "max") ? _max(target, "y") : value.y, "scrollTo_y", true);
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 					this._overwriteProps.push("scrollTo_y");
 				} else {
 					this.skipY = true;
@@ -144,7 +110,6 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 				var x = (this._wdw || !this.skipX) ? this.getX() : this.xPrev,
 					y = (this._wdw || !this.skipY) ? this.getY() : this.yPrev,
 					yDif = y - this.yPrev,
-<<<<<<< HEAD
 					xDif = x - this.xPrev,
 					threshold = ScrollToPlugin.autoKillThreshold;
 
@@ -160,16 +125,6 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 						this.skipX = true; //if the user scrolls separately, we should stop tweening!
 					}
 					if (!this.skipY && (yDif > threshold || yDif < -threshold) && y < _max(this._target, "y")) {
-=======
-					xDif = x - this.xPrev;
-
-				if (this._autoKill) {
-					//note: iOS has a bug that throws off the scroll by several pixels, so we need to check if it's within 7 pixels of the previous one that we set instead of just looking for an exact match.
-					if (!this.skipX && (xDif > 7 || xDif < -7) && x < _max(this._target, "x")) {
-						this.skipX = true; //if the user scrolls separately, we should stop tweening!
-					}
-					if (!this.skipY && (yDif > 7 || yDif < -7) && y < _max(this._target, "y")) {
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 						this.skipY = true; //if the user scrolls separately, we should stop tweening!
 					}
 					if (this.skipX && this.skipY) {
@@ -197,20 +152,9 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		p = ScrollToPlugin.prototype;
 
 	ScrollToPlugin.max = _max;
-<<<<<<< HEAD
 	ScrollToPlugin.getOffset = _getOffset;
 	ScrollToPlugin.buildGetter = _buildGetter;
 	ScrollToPlugin.autoKillThreshold = 7;
-=======
-
-	p.getX = function() {
-		return (!this._wdw) ? this._target.scrollLeft : (_window.pageXOffset != null) ? _window.pageXOffset : (_doc.scrollLeft != null) ? _doc.scrollLeft : document.body.scrollLeft;
-	};
-
-	p.getY = function() {
-		return (!this._wdw) ? this._target.scrollTop : (_window.pageYOffset != null) ? _window.pageYOffset : (_doc.scrollTop != null) ? _doc.scrollTop : document.body.scrollTop;
-	};
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 
 	p._kill = function(lookup) {
 		if (lookup.scrollTo_x) {
@@ -222,7 +166,6 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		return this._super._kill.call(this, lookup);
 	};
 
-<<<<<<< HEAD
 }); if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); }
 
 //export to AMD/RequireJS and CommonJS/Node (precursor to full modular build system coming at a later date)
@@ -238,6 +181,3 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 		define(["TweenLite"], getGlobal);
 	}
 }("ScrollToPlugin"));
-=======
-}); if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); }
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
