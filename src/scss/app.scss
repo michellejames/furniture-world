@@ -12,20 +12,12 @@ TABLE OF CONTENTS:
 ==============================================
 */
 
-<<<<<<< HEAD
 $colors: #b71234, #ff5800, #ffd500, #009b48, #0046ad, #cecece;
 $sides: front, back, right, left, top, bottom;
 $repeat: 50;
 @import 'reset';
 @import "rain";
 @import 'slider';
-=======
-@import 'reset';
-@import 'slider';
-$colors: #b71234, #ff5800, #ffd500, #009b48, #0046ad, #cecece;
-$sides: front, back, right, left, top, bottom;
-$repeat: 50;
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 
 /* 1. Main Layout ================================= */
 
@@ -39,7 +31,6 @@ html {
 
 
 body {
-<<<<<<< HEAD
   width: 100%;
   height: 100%;
   background: black;
@@ -315,13 +306,6 @@ body {
 
 
 
-=======
-	width: 100%;
-	height: 100%;
-  //overflow: hidden; 
-}
-
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 .tunnel-wrapper {
   position: relative;
   width: 100%;
@@ -339,10 +323,6 @@ body {
     url("http://rachelnabors.com/alice-in-videoland/book/img/bg-tunnel-border-right.svg") repeat-y 100% 100%,
     url("http://rachelnabors.com/alice-in-videoland/book/img/bg_tunnel-specks.png"),
     #6c373f;
-<<<<<<< HEAD
-    // url(../img/tunnel-background.png);
-=======
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
   margin: 0 auto;
   height: calc(100% + 300px);
   width: 100vw;
@@ -351,92 +331,18 @@ body {
   will-change: transform;
 }
 
-<<<<<<< HEAD
 .furniture-carousel {
   transition: 0.5s;
 }
 
 #room-scene {
   overflow: hidden;
-=======
-// @keyframes tunnelFly {
-//   100% { transform: translate3D(0, -300px, 0); }
-// }
-
-.container-page {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-
-.box {
-  width: 100px;
-  height: 100px;
-  background: red;
-  border-bottom: none;
-  z-index: 21;
-  position: absolute;
-  top: 0;
-  left: 50%;
-}
-
-.chair {
-	background-image: url(../img/chair.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
-	//transform: scale(.5);
-	width: 20%;
-	height: 50vh;
-	position: absolute;
-	transform: rotate(20deg);
-  z-index: 100;
-	top: 30%;
-	left: 10%;
-}
-
-.table {
-  background-image: url(../img/table.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  //transform: scale(.5);
-  width: 20%;
-  height: 50vh;
-  position: absolute;
-  transform: rotate(20deg);
-  z-index: 100;
-  top: 20%;
-  left: 20%;
-}
-
-.drum {
-  background-image: url(../img/drum.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  //transform: scale(.5);
-  width: 20%;
-  height: 30vh;
-  position: absolute;
-  transform: rotate(20deg);
-  z-index: 100;
-  top: 20%;
-  left: 70%;
-}
-
-#scene {
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
   width: 100%;
   height: 100vh;
   position: relative;
   pointer-events: all !important;
-<<<<<<< HEAD
   // min-width: 1200px;
   // min-height: 700px;
-=======
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 
   .layer {
     position: absolute;
@@ -444,11 +350,7 @@ body {
     height: 100%;
 
     .room-background {
-<<<<<<< HEAD
       background-image: url(../img/bgs/RoomBG.png);
-=======
-      background-image: url(../img/background3D.jpg);
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -457,10 +359,6 @@ body {
       height: 120%;
       top: -5%;
       left: -5%;
-<<<<<<< HEAD
-=======
-      filter: blur(3px) grayscale(55%) sepia(.8);
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
     }
 
     .test-bounds {
@@ -496,40 +394,19 @@ body {
 
 .highlight-wrapper {
   position: absolute;
-<<<<<<< HEAD
   top: -5%;
   left: 0;
   width: 100%;
   height: 110%;
-=======
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
   overflow: hidden;
   display: none;
 }
 
-<<<<<<< HEAD
-=======
-.stage_highlight {
-  position: absolute;
-  top: 0;
-  left: 25vh;
-  width: 100vh;
-  height: 100%;
-  overflow: hidden;
-  background-image: radial-gradient(ellipse closest-side at 50% 82%, rgb(84,120,173), rgba(84,120,173,0) 100%);
-  animation: move_highlight 5s linear infinite;
-}
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 .spotlight_swivel {
   animation: rotate_spotlight 5s linear infinite;
 }
 .lamp {
   position: absolute;
-<<<<<<< HEAD
   // width: 40vh;
   width: 20vh;
   //height: 400vh;
@@ -538,62 +415,7 @@ body {
   top:-220vh;
   left: 80vh;
   transform: perspective(20vh) rotateX(20deg);
-=======
-  width: 40vh;
-  height: 400vh;
-  background-image: radial-gradient(ellipse, rgba(82,116,168,0.5), rgba(82,116,168,0.2) 25%, rgba(82,116,168,0) 50%);
-  top:-220vh;
-  left:55vh;
-  transform: perspective(23vh) rotateX(30deg);
-}
-.spotlight {
-  opacity: 0.5;
-  transform: scale(1.5,3);
-  position: absolute;
-  top: -20vh;
-  left: calc(50% - 75vh);
-}
-.spotlight::after {
-  content: '';
-  position: absolute;
-  top: -50vh;
-  background-image: radial-gradient(ellipse closest-corner at 75% 75%, rgba(55,89,138,0.2), rgba(55,89,138,0));
-  border-radius: 100%;
-  width: 100vh;
-  height: 100vh;
-  clip: rect(50vh, 100vh, 100vh, 50vh);
-  transform: rotate(45deg);
-}
 
-@keyframes rotate_spotlight {
-  0% {
-    transform: rotate(0deg) scaleY(1) translateY(0);
-  }
-  25% {
-    transform: rotate(-15deg) scaleY(1.1) translateY(-3vh);
-  }
-  50% {
-    transform: rotate(0deg) scaleY(1) translateY(0);
-  }
-  75% {
-    transform: rotate(15deg) scaleY(1.1) translateY(-3vh);
-  }
-}
-
-@keyframes move_highlight {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(25vh);
-  }
-  50% {
-    transform: translateX(0);
-  }
-  75% {
-    transform: translateX(-25vh);
-  }
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
 }
 
 .gif {
@@ -611,7 +433,6 @@ body {
   z-index: 10;
 }
 
-<<<<<<< HEAD
 
 .image-text__details {
   position: absolute;
@@ -723,31 +544,6 @@ body {
   transform: translate(-50%, -50%);
 
 }
-=======
-.image-text__headline {
-  position: absolute;
-  top: 5%;
-  left: -20%;
-  color: #fff;
-  font-size: 2rem;
-  opacity: 0;
-}
-
-.image-text__details {
-  position: absolute;
-  bottom: 5%;
-  right: -20%;
-  color: #fff;
-  font-size: 1.2rem;
-  opacity: 0;
-  text-align: right;
-  width: 30%;
-}
-
-
-
->>>>>>> 9346f3614678dc4a4a8f5adfda1463079ce8003b
-
 
 
 
