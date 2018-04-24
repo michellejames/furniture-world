@@ -37,6 +37,194 @@ body {
   // overflow: hidden;
 }
 
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    color: #fff;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 30%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    color: #fff;
+
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+
+    z-index: 1001;
+}
+
+    #loader:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #fff;
+
+        -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    #loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #fff;
+
+        -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+          animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    @-webkit-keyframes spin {
+        0%   { 
+            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(0deg);  /* IE 9 */
+            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(360deg);  /* IE 9 */
+            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+    }
+    @keyframes spin {
+        0%   { 
+            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(0deg);  /* IE 9 */
+            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(360deg);  /* IE 9 */
+            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+    }
+
+    #loader-wrapper .loader-section {
+        position: fixed;
+        top: 0;
+        width: 51%;
+        height: 100%;
+        background-image: url(../img/bgs/RoomBG.png);
+        filter: blur(4px);
+        z-index: 1000;
+        -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(0);  /* IE 9 */
+        transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+    }
+
+    #loader-wrapper .loader-section.section-left {
+        left: 0;
+        background-position: left;
+    }
+
+    #loader-wrapper .loader-section.section-right {
+        right: 0;
+        background-position: right;
+    }
+
+    /* Loaded */
+    .loaded #loader-wrapper .loader-section.section-left {
+        -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(-100%);  /* IE 9 */
+                transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+                transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+
+    .loaded #loader-wrapper .loader-section.section-right {
+        -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(100%);  /* IE 9 */
+                transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+    
+    .loaded #loader {
+        opacity: 0;
+        -webkit-transition: all 0.1s ease-out;  
+                transition: all 0.1s ease-out;
+    }
+    .loaded #loader-wrapper {
+        visibility: hidden;
+
+        -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateY(-100%);  /* IE 9 */
+                transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.3s 1s ease-out;  
+                transition: all 0.3s 1s ease-out;
+    }
+    
+    /* JavaScript Turned Off */
+    .no-js #loader-wrapper {
+        display: none;
+    }
+
+    .no-js h1 {
+        color: #fff;
+    }
+
+.pre-loader {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1003;
+  color: #fff;
+
+  .pre-loader-headline {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .pre-loader-image {
+      background-image: url(../img/1stdibs_logo.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 12vw;
+      height: 6vh;
+      margin-right: 15px;
+    }
+
+    & h1 {
+      font-size: 3rem;
+      font-family: "lust";
+      line-height: 6rem;
+    }  
+  }
+
+    & h2 {
+      font-family: "proxima-nova";
+      font-size: 1.8rem;
+      font-weight: light;
+    }
+}
+
 #opening-scene {
   overflow: hidden; 
   width: 100vw;
@@ -209,10 +397,9 @@ body {
 
 .falling-deer {
   position: absolute;
-  background-image: url(../img/fallinitems/deer.png);
+  background-image: url(../img/deer.png);
   background-repeat: no-repeat;
   background-size: contain;
-  //background-position: center;
   width: 30.3806735%;
   height: 20.07564737%;
   top: 18.62089031%;
@@ -221,26 +408,25 @@ body {
 
 .falling-bat {
   position: absolute;
-  background-image: url(../img/fallinitems/bat.png);
+  background-image: url(../img/bat.png);
   background-repeat: no-repeat;
   background-size: contain;
-  //background-position: center;
-  width: 25.98828697%;
+  width: 38.988287%;
   height: 13.82019203%;
-  top: 46.55222578%;
-  right: 0;
+  top: 42.552226%;
+  right: -15%;
 }
 
 .falling-bug {
   position: absolute;
-  background-image: url(../img/fallinitems/lightning_bug.png);
+  background-image: url(../img/lightning_bug.png);
   background-repeat: no-repeat;
   background-size: contain;
   //background-position: center;
-  width: 22.69399707%;
+  width: 38.693997%;
   height: 14.25661914%;
-  bottom: 31.56822811%;
-  left: 0;
+  bottom: 35.568228%;
+  left: -12%;
 }
 
 .falling-weird {
@@ -269,14 +455,13 @@ body {
 
 .falling-spider {
   position: absolute;
-  background-image: url(../img/fallinitems/spider.png);
+  background-image: url(../img/spider.png);
   background-repeat: no-repeat;
   background-size: contain;
-  //background-position: center;
-  width: 27.30600293%;
-  height: 18.62089031%;
-  bottom: 14.83852197%;
-  right: 0;
+  width: 50.306003%;
+  height: 21.62089%;
+  bottom: 11.838522%;
+  right: -20%;
 }
 
 .falling-wild {
@@ -302,9 +487,6 @@ body {
   bottom: 0;
   right: 11.34699854%;
 }
-
-
-
 
 .tunnel-wrapper {
   position: relative;
@@ -399,7 +581,7 @@ body {
   width: 100%;
   height: 110%;
   overflow: hidden;
-  display: none;
+  // display: none;
 }
 
 .spotlight_swivel {
@@ -415,24 +597,7 @@ body {
   top:-220vh;
   left: 80vh;
   transform: perspective(20vh) rotateX(20deg);
-
 }
-
-.gif {
-  background-image: url(../img/furniture3.gif);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  position: absolute;
-  width: 30%;
-  height: 50vh;
-  border-radius: 10px;
-  top: 250vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-}
-
 
 .image-text__details {
   position: absolute;
@@ -473,7 +638,6 @@ body {
 
       font-family: "lust";
       font-size: 1.625rem;
-      margin-left: 5%;
       line-height: 32px;
 
       @media screen and (min-width: 600px) {
@@ -486,7 +650,6 @@ body {
       font-family: "proxima-nova";
       font-weight: light;
       font-size: 1.4375rem;
-      margin-left: 5%;
       margin-bottom: 5%;
     }
 

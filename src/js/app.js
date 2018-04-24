@@ -3,6 +3,13 @@ $(window).on('beforeunload', function() {
     $(window).scrollTop(0);
 });
 
+$(document).ready(function() {
+	
+	setTimeout(function(){
+		$('body').addClass('loaded');
+	}, 3000);	
+});
+
 //////// AUDIO ////////
 
 $('#falling-audio').prop("volume", 0.0);
@@ -52,18 +59,9 @@ TweenMax.fromTo(".directions", .05, {opacity: .5, yoyo: true, repeat: -1}, {opac
 
 //////////// PARALLAX EFFECTS ////////////
 $(function () {
-	let scene = $('#room-scene').get(0);
-	let parallax = new Parallax(scene);	
-});
-
-$(function () {
-	let scene = $('#opening-scene').get(0);
-	let parallax = new Parallax(scene);	
-});
-
-$(function () {
-	let scene = $('#falling-scene').get(0);
-	let parallax = new Parallax(scene);	
+	new Parallax($('#room-scene').get(0));	
+	new Parallax($('#opening-scene').get(0));	
+	new Parallax($('#falling-scene').get(0));	
 });
 
 
@@ -76,8 +74,7 @@ var hammertime = new Hammer(carouselContainer);
 hammertime.on('swiperight', function() {
 	currdeg = currdeg - 36;
 	spinCarouselToCurrDeg();
-});
-hammertime.on('swipeleft', function() {
+}).on('swipeleft', function() {
 	currdeg = currdeg + 36;
 	spinCarouselToCurrDeg();
 });
